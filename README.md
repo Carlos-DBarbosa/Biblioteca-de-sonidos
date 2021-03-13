@@ -1,6 +1,6 @@
 # Biblioteca-de-sonidos
 
-### Descripcion
+### Descripción
 
 El proyecto consiste en una biblioteca de archivos de sonido que contenga una aplicación funcional y de fácil acceso tanto al administrador como para el usuario final en el cual se almacenen, procesen y archiven diversos tipos de archivos de sonido los cuales se dividirán en diversas categorías según el uso que se le vayan a dar.
 
