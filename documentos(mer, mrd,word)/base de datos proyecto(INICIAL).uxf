@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>824</x>
+      <y>336</y>
+      <w>152</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>USER
+--
+citizenshipCard &lt;&lt;PK&gt;&gt;:Text
+name:Text
+DateOfBirth:Date
+Mail:Text
+userPassword:Text
+userPhone:Text[0..1]
+profilePicture:Binary[0..1]
+userAddres:Text[0..1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>352</x>
+      <y>304</y>
+      <w>168</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>CATEGORY_SOUND
+--
+idCategory:Number&lt;&lt;PK&gt;&gt;
+nick_category:Text
+Description_category:Text
+potential_uses:Text[0..1]
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1152</x>
+      <y>344</y>
+      <w>168</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>CARD_USER
+--
+Bank:Text
+expirationDate:Fecha
+Number:Text
+Id_card&lt;&lt;PK&gt;&gt;:Text
+securityCode:Text
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1008</x>
+      <y>560</y>
+      <w>256</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Alejandro Hernández Castañeda
+Carlos Daniel Barbosa Gironza
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>824</x>
+      <y>104</y>
+      <w>200</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>USER_GROUP
+--
+GroupName:Texto
+creationDate:Date
+UnitedUserNumber:Numeral
+Id_grup&lt;&lt;PK&gt;&gt;:Numeral
+GroupDescription:Texto[0..1]
+groupPrivatePublic:Boolean</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>104</x>
+      <y>32</y>
+      <w>144</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>-The administrator is
+the owner of the app 
+that can create the 
+categories and these 
+sound them out
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>288</x>
+      <y>464</y>
+      <w>136</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>-Uploading files will 
+decides whether the files 
+of sound are public 
+or private 
+
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1152</x>
+      <y>296</y>
+      <w>152</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>-The User can buy
+sound files of others 
+users or administrator
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>104</x>
+      <y>104</y>
+      <w>192</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>ADMINISTRATOR
+--
+Id_administrator&lt;&lt;PK&gt;&gt;:Text 
+Password_administratror:Text
+Nick_admin:Text
+mail_administrator: Text
+administratorPhone: Text[0..1]
+direction_administrator: Text[0..1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>360</x>
+      <y>528</y>
+      <w>168</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>SOUND
+--
+idSound:Number&lt;&lt;PK&gt;&gt;
+sound_public_private:Boolean
+soundDuration:text
+uploadFor:text[1..0]
+FileSound: text
+Description_sound:Text[0..1]
+Upload_date:Date
+Price: real[0..1]
+uploadFor:text[1..0]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>504</x>
+      <y>464</y>
+      <w>136</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>-duration is defined
+a maximum and a minimum
+when implementing
+the database 
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>184</x>
+      <y>200</y>
+      <w>184</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+create v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0;210.0;190.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>424</x>
+      <y>384</y>
+      <w>80</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+contains v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>776</x>
+      <y>400</y>
+      <w>64</w>
+      <h>160</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1..1
+
+
+ load v</panel_attributes>
+    <additional_attributes>10.0;180.0;10.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>896</x>
+      <y>200</y>
+      <w>96</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+it consists of v</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>968</x>
+      <y>376</y>
+      <w>200</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..1
+has &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>544</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>USER_SOUND
+--
+idUserSound:Numeber&lt;&lt;PK&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>528</x>
+      <y>624</y>
+      <w>136</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>-may be uploaded with a
+price or stop 
+free way 
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>584</y>
+      <w>224</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=1..*
+ &gt;
+ is present</panel_attributes>
+    <additional_attributes>10.0;20.0;260.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>432</x>
+      <y>232</y>
+      <w>176</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>-The administrator
+can create new categories 
+giving a description of the joy
+category and if you want to give a
+possible use
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>1024</x>
+      <y>104</y>
+      <w>136</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>-Users can
+group with others 
+users and put them as
+public or private
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>112</x>
+      <y>200</y>
+      <w>264</w>
+      <h>448</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+go up v</panel_attributes>
+    <additional_attributes>20.0;10.0;10.0;530.0;310.0;530.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>976</x>
+      <y>416</y>
+      <w>152</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>the user is able to upload
+sounds, to put a
+price if you wish, of 
+downloading sounds and making
+peer group 
+to talk to each other
+and share the sounds that 
+have gone up before 
+bg=blue</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1248</x>
+      <y>96</y>
+      <w>200</w>
+      <h>104</h>
+    </coordinates>
+    <panel_attributes>CHAT_GROUP
+--
+ChatName:Texto
+ChatCreationDate:date
+userChat:text 
+Id_chat&lt;&lt;PK&gt;&gt;:numeral
+ChatDescription:Text[0..1]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1016</x>
+      <y>176</y>
+      <w>248</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..*
+m2=1..1
+is conformed &gt;</panel_attributes>
+    <additional_attributes>10.0;20.0;290.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>640</x>
+      <y>232</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>GROUP_SOUND
+--
+idSoundGroup:Numeber&lt;&lt;PK&gt;&gt;
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>304</y>
+      <w>248</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..*
+m2=1..1
+is part ^</panel_attributes>
+    <additional_attributes>240.0;10.0;240.0;320.0;10.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>704</x>
+      <y>128</y>
+      <w>136</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1..1
+m2=0..*
+&lt; 
+has in</panel_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0;10.0;130.0</additional_attributes>
+  </element>
+</diagram>
